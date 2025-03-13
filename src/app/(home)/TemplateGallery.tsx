@@ -20,7 +20,6 @@ export default function TemplateGallery() {
   const create = useMutation(api.documents.create);
 
   const [isCreating, setIsCreating] = useState(false);
-  const isCreated = false;
 
   const onTemplateClick = (title: string, initialContent: string) => {
     setIsCreating(true);
@@ -50,11 +49,11 @@ export default function TemplateGallery() {
                 <div
                   className={cn(
                     "aspect-[3/4] flex flex-col gap-y-2.5",
-                    isCreated && "pointer-events-none opacity-50"
+                    isCreating && "pointer-events-none opacity-50"
                   )}
                 >
                   <button
-                    disabled={isCreated}
+                    disabled={isCreating}
                     className='size-full hover:border-blue-500 rounded-sm border hover:bg-blue-50 transition flex flex-col items-center justify-center gap-y-4 bg-white cursor-pointer'
                     onClick={() =>
                       onTemplateClick(

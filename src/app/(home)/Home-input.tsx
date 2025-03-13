@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function HomeInput() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [search, setSearch] = useSearchParam();
   const [inputValue, setInputValue] = useState("");
 
